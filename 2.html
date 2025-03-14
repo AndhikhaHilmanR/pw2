@@ -3,64 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pertemuan 2 HTML Dasar</title>
+    <title>Form Input</title>
 </head>
 <body>
+    <h2>Formulir Pendaftaran</h2>
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-    <header>
-        <a href="https://ipiwja.ac.id">Home</a>
-    </header>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
-    <main id="main" class="main">
-        hi<br>
-    </main>
+        <label for="date">Tanggal Lahir:</label>
+        <input type="date" id="date" name="date"><br><br>
 
-    <section>
-        <p>Hello world</p>
-        <img src="/rumah_jual_1.jpeg" alt="Gambar ilustrasi" width="200" height="200">
-    </section>
+        <label for="file">Upload Dokumen:</label>
+        <input type="file" id="file" name="file"><br><br>
 
-    <section id="paragraf">
-        <h1>Pertemuan 2</h1>
-        <h2>HTML Dasar</h2>
-        <p>Pertemuan dasar HTML membuat paragraf sederhana dengan huruf <i>miring</i>, <b>tebal</b>.</p>
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="male" name="gender" value="Laki-laki">
+        <label for="male">Laki-laki</label><br>
+        <input type="radio" id="female" name="gender" value="Perempuan">
+        <label for="female">Perempuan</label><br><br>
 
-        <ul>
-            <li>1</li>
-            <li>2</li>
-        </ul>
+        <label>Hobi:</label><br>
+        <input type="checkbox" id="music" name="hobby" value="Musik">
+        <label for="music">Musik</label><br>
+        <input type="checkbox" id="sports" name="hobby" value="Olahraga">
+        <label for="sports">Olahraga</label><br>
+        <input type="checkbox" id="reading" name="hobby" value="Membaca">
+        <label for="reading">Membaca</label><br><br>
 
-        <ol>
-            <li>Satu</li>
-            <li>Dua</li>
-        </ol>
-    </section>
+        <label for="search">Cari:</label>
+        <input type="search" id="search" name="search"><br><br>
 
-    <section id="table">
-        <h2>Table</h2>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Jan</th>
-                    <th>Feb</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>1</td>
-                    <td>2</td>
-                </tr>
-                <tr>
-                    <td>3</td>
-                    <td>4</td>
-                </tr>
-            </tbody>
-        </table>
-    </section>
-
-    <footer>
-        &copy; 2025
-    </footer>
-
+        <button type="submit">Submit</button>
+    </form>
 </body>
 </html>
