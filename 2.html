@@ -5,45 +5,100 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Form Input</title>
+    <style>
+        /* Style dasar */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            text-align: center;
+        }
+
+        form {
+            max-width: 400px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            background: #f9f9f9;
+        }
+
+        img {
+            max-width: 100px;
+            height: auto;
+            border-radius: 50%;
+        }
+
+        input, button {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        button {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Media Query untuk layar kecil (smartphone) */
+        @media (max-width: 600px) {
+            form {
+                width: 90%;
+            }
+
+            input, button {
+                width: 100%;
+            }
+        }
+    </style>
 </head>
 
 <body>
     <h2>Formulir Pendaftaran</h2>
 
     <!-- Menampilkan gambar di atas input username -->
-    <img src="rumah_jual_1.jpeg" alt="Foto Profil" width="100" height="100"><br>
+    <img src="rumah_jual_1.jpeg" alt="Foto Profil"><br>
 
     <form action="#" method="post">
         <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
+        <input type="text" id="username" name="username" required>
 
         <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
+        <input type="password" id="password" name="password" required>
 
         <label for="date">Tanggal Lahir:</label>
-        <input type="date" id="date" name="date"><br><br>
+        <input type="date" id="date" name="date">
 
         <label for="file">Upload Dokumen:</label>
-        <input type="file" id="file" name="file"><br><br>
+        <input type="file" id="file" name="file">
 
         <label>Jenis Kelamin:</label><br>
         <input type="radio" id="male" name="gender" value="Laki-laki">
-        <label for="male">Laki-laki</label><br>
+        <label for="male">Laki-laki</label>
         <input type="radio" id="female" name="gender" value="Perempuan">
-        <label for="female">Perempuan</label><br><br>
+        <label for="female">Perempuan</label>
 
         <label>Hobi:</label><br>
         <input type="checkbox" id="music" name="hobby" value="Musik">
-        <label for="music">Musik</label><br>
+        <label for="music">Musik</label>
         <input type="checkbox" id="sports" name="hobby" value="Olahraga">
-        <label for="sports">Olahraga</label><br>
+        <label for="sports">Olahraga</label>
         <input type="checkbox" id="reading" name="hobby" value="Membaca">
-        <label for="reading">Membaca</label><br><br>
+        <label for="reading">Membaca</label>
 
         <label for="search">Cari:</label>
-        <input type="search" id="search" name="search"><br><br>
+        <input type="search" id="search" name="search">
 
         <button type="submit">Submit</button>
     </form>
 </body>
+
 </html>
