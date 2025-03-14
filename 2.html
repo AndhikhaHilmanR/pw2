@@ -63,6 +63,12 @@
             justify-content: start;
             gap: 10px;
             margin-top: 5px;
+            align-items: center;
+        }
+
+        /* Mengecilkan ukuran radio button */
+        .radio-group input[type="radio"] {
+            transform: scale(0.8); /* Perkecil ukuran radio button */
         }
 
         /* Tombol submit */
@@ -88,6 +94,10 @@
 
             .profile-img {
                 max-width: 120px; /* Ukuran sedikit dikurangi untuk layar kecil */
+            }
+
+            .radio-group input[type="radio"] {
+                transform: scale(0.7); /* Lebih kecil lagi untuk layar kecil */
             }
         }
     </style>
