@@ -4,101 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Input</title>
+    <title>Form Pendaftaran</title>
     <style>
         /* Style dasar */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
             padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            max-width: 400px;
+            width: 90%;
             text-align: center;
         }
 
-        form {
-            max-width: 400px;
-            margin: auto;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            background: #f9f9f9;
-        }
-
-        img {
-            max-width: 100px;
+        /* Gaya untuk gambar profil (diperbesar) */
+        .profile-img {
+            max-width: 130px; /* Perbesar ukuran gambar */
             height: auto;
             border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            text-align: left;
+            font-weight: bold;
+            margin-top: 10px;
         }
 
         input, button {
             width: 100%;
             padding: 10px;
-            margin: 8px 0;
+            margin-top: 5px;
             border-radius: 5px;
             border: 1px solid #ccc;
+            font-size: 16px;
         }
 
+        /* Styling khusus untuk radio dan checkbox */
+        .radio-group, .checkbox-group {
+            display: flex;
+            justify-content: start;
+            gap: 10px;
+            margin-top: 5px;
+        }
+
+        /* Tombol submit */
         button {
             background-color: #007bff;
             color: white;
             border: none;
             cursor: pointer;
+            margin-top: 15px;
+            transition: 0.3s;
         }
 
         button:hover {
             background-color: #0056b3;
         }
 
-        /* Media Query untuk layar kecil (smartphone) */
+        /* Media Query untuk tampilan mobile */
         @media (max-width: 600px) {
-            form {
-                width: 90%;
+            .container {
+                width: 95%;
+                padding: 15px;
             }
 
-            input, button {
-                width: 100%;
+            .profile-img {
+                max-width: 120px; /* Ukuran sedikit dikurangi untuk layar kecil */
             }
         }
     </style>
 </head>
 
 <body>
-    <h2>Formulir Pendaftaran</h2>
 
-    <!-- Menampilkan gambar di atas input username -->
-    <img src="rumah_jual_1.jpeg" alt="Foto Profil"><br>
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
 
-    <form action="#" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
+        <!-- Menampilkan gambar di atas input username -->
+        <img src="rumah_jual_1.jpeg" alt="Foto Profil" class="profile-img">
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
+        <form action="#" method="post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required>
 
-        <label for="date">Tanggal Lahir:</label>
-        <input type="date" id="date" name="date">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
 
-        <label for="file">Upload Dokumen:</label>
-        <input type="file" id="file" name="file">
+            <label for="date">Tanggal Lahir:</label>
+            <input type="date" id="date" name="date">
 
-        <label>Jenis Kelamin:</label><br>
-        <input type="radio" id="male" name="gender" value="Laki-laki">
-        <label for="male">Laki-laki</label>
-        <input type="radio" id="female" name="gender" value="Perempuan">
-        <label for="female">Perempuan</label>
+            <label for="file">Upload Dokumen:</label>
+            <input type="file" id="file" name="file">
 
-        <label>Hobi:</label><br>
-        <input type="checkbox" id="music" name="hobby" value="Musik">
-        <label for="music">Musik</label>
-        <input type="checkbox" id="sports" name="hobby" value="Olahraga">
-        <label for="sports">Olahraga</label>
-        <input type="checkbox" id="reading" name="hobby" value="Membaca">
-        <label for="reading">Membaca</label>
+            <label>Jenis Kelamin:</label>
+            <div class="radio-group">
+                <input type="radio" id="male" name="gender" value="Laki-laki">
+                <label for="male">Laki-laki</label>
+                <input type="radio" id="female" name="gender" value="Perempuan">
+                <label for="female">Perempuan</label>
+            </div>
 
-        <label for="search">Cari:</label>
-        <input type="search" id="search" name="search">
+            <label>Hobi:</label>
+            <div class="checkbox-group">
+                <input type="checkbox" id="music" name="hobby" value="Musik">
+                <label for="music">Musik</label>
+                <input type="checkbox" id="sports" name="hobby" value="Olahraga">
+                <label for="sports">Olahraga</label>
+                <input type="checkbox" id="reading" name="hobby" value="Membaca">
+                <label for="reading">Membaca</label>
+            </div>
 
-        <button type="submit">Submit</button>
-    </form>
+            <label for="search">Cari:</label>
+            <input type="search" id="search" name="search">
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
 </body>
 
 </html>
