@@ -1,153 +1,46 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Pendaftaran</title>
-    <style>
-        /* Style dasar */
-        body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f9;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .container {
-            background: #ffffff;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 90%;
-            text-align: center;
-        }
-
-        /* Gaya untuk gambar profil (diperbesar) */
-        .profile-img {
-            max-width: 130px; /* Perbesar ukuran gambar */
-            height: auto;
-            border-radius: 50%;
-            margin-bottom: 15px;
-        }
-
-        /* Form styling */
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-        }
-
-        label {
-            font-weight: bold;
-            margin-top: 10px;
-            display: block;
-        }
-
-        input, button {
-            width: calc(100% - 20px);
-            padding: 10px;
-            margin-top: 5px;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-            font-size: 16px;
-        }
-
-        /* Styling untuk radio dan checkbox agar lebih rapi */
-        .radio-group, .checkbox-group {
-            display: flex;
-            gap: 15px;
-            margin-top: 5px;
-        }
-
-        .radio-group label, .checkbox-group label {
-            margin-left: 5px;
-        }
-
-        /* Ukuran radio button lebih kecil */
-        .radio-group input[type="radio"] {
-            transform: scale(0.8);
-            margin-right: 5px;
-        }
-
-        /* Tombol submit */
-        button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            cursor: pointer;
-            margin-top: 15px;
-            transition: 0.3s;
-        }
-
-        button:hover {
-            background-color: #0056b3;
-        }
-
-        /* Media Query untuk tampilan mobile */
-        @media (max-width: 600px) {
-            .container {
-                width: 95%;
-                padding: 15px;
-            }
-
-            .profile-img {
-                max-width: 120px;
-            }
-
-            .radio-group input[type="radio"] {
-                transform: scale(0.7);
-            }
-        }
-    </style>
+    <title>Form Input</title>
 </head>
-
 <body>
+    <h2>Formulir Pendaftaran</h2>
 
-    <div class="container">
-        <h2>Formulir Pendaftaran</h2>
+    <img src="rumah_jual_1.jpeg" alt="Foto Profil" width="100" height="100"><br>
 
-        <!-- Menampilkan gambar di atas input username -->
-        <img src="rumah_jual_1.jpeg" alt="Foto Profil" class="profile-img">
+    <form action="#" method="post">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
 
-        <form action="#" method="post">
-            <label for="username">Username:</label>
-            <input type="text" id="username" name="username" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
 
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required>
+        <label for="date">Tanggal Lahir:</label>
+        <input type="date" id="date" name="date"><br><br>
 
-            <label for="date">Tanggal Lahir:</label>
-            <input type="date" id="date" name="date">
+        <label for="file">Upload Dokumen:</label>
+        <input type="file" id="file" name="file"><br><br>
 
-            <label for="file">Upload Dokumen:</label>
-            <input type="file" id="file" name="file">
+        <label>Jenis Kelamin:</label><br>
+        <input type="radio" id="male" name="gender" value="Laki-laki">
+        <label for="male">Laki-laki</label><br>
+        <input type="radio" id="female" name="gender" value="Perempuan">
+        <label for="female">Perempuan</label><br><br>
 
-            <label>Jenis Kelamin:</label>
-            <div class="radio-group">
-                <label><input type="radio" id="male" name="gender" value="Laki-laki"> Laki-laki</label>
-                <label><input type="radio" id="female" name="gender" value="Perempuan"> Perempuan</label>
-            </div>
+        <label>Hobi:</label><br>
+        <input type="checkbox" id="music" name="hobby" value="Musik">
+        <label for="music">Musik</label><br>
+        <input type="checkbox" id="sports" name="hobby" value="Olahraga">
+        <label for="sports">Olahraga</label><br>
+        <input type="checkbox" id="reading" name="hobby" value="Membaca">
+        <label for="reading">Membaca</label><br><br>
 
-            <label>Hobi:</label>
-            <div class="checkbox-group">
-                <label><input type="checkbox" id="music" name="hobby" value="Musik"> Musik</label>
-                <label><input type="checkbox" id="sports" name="hobby" value="Olahraga"> Olahraga</label>
-                <label><input type="checkbox" id="reading" name="hobby" value="Membaca"> Membaca</label>
-            </div>
+        <label for="search">Cari:</label>
+        <input type="search" id="search" name="search"><br><br>
 
-            <label for="search">Cari:</label>
-            <input type="search" id="search" name="search">
-
-            <button type="submit">Submit</button>
-        </form>
-    </div>
-
+        <button type="submit">Submit</button>
+    </form>
 </body>
-
 </html>
