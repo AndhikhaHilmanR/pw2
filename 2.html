@@ -3,44 +3,111 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form Input</title>
+    <title>Formulir Pendaftaran</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 350px;
+        }
+        h2 {
+            text-align: center;
+            color: #333;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            font-weight: bold;
+            display: block;
+        }
+        input[type="text"], input[type="password"], input[type="date"], input[type="file"], input[type="search"] {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .gender, .hobby {
+            margin-top: 5px;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background: #218838;
+        }
+        .profile-pic {
+            display: block;
+            margin: 0 auto 15px;
+            border-radius: 50%;
+        }
+    </style>
 </head>
 <body>
-    <h2>Formulir Pendaftaran</h2>
-
-    <img src="rumah_jual_1.jpeg" alt="Foto Profil" width="100" height="100"><br>
-
-    <form action="#" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required><br><br>
-
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required><br><br>
-
-        <label for="date">Tanggal Lahir:</label>
-        <input type="date" id="date" name="date"><br><br>
-
-        <label for="file">Upload Dokumen:</label>
-        <input type="file" id="file" name="file"><br><br>
-
-        <label>Jenis Kelamin:</label><br>
-        <input type="radio" id="male" name="gender" value="Laki-laki">
-        <label for="male">Laki-laki</label><br>
-        <input type="radio" id="female" name="gender" value="Perempuan">
-        <label for="female">Perempuan</label><br><br>
-
-        <label>Hobi:</label><br>
-        <input type="checkbox" id="music" name="hobby" value="Musik">
-        <label for="music">Musik</label><br>
-        <input type="checkbox" id="sports" name="hobby" value="Olahraga">
-        <label for="sports">Olahraga</label><br>
-        <input type="checkbox" id="reading" name="hobby" value="Membaca">
-        <label for="reading">Membaca</label><br><br>
-
-        <label for="search">Cari:</label>
-        <input type="search" id="search" name="search"><br><br>
-
-        <button type="submit">Submit</button>
-    </form>
+    <div class="container">
+        <h2>Formulir Pendaftaran</h2>
+        <img src="rumah_jual_1.jpeg" alt="Foto Profil" width="100" height="100" class="profile-pic">
+        <form action="#" method="post">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="date">Tanggal Lahir:</label>
+                <input type="date" id="date" name="date">
+            </div>
+            <div class="form-group">
+                <label for="file">Upload Dokumen:</label>
+                <input type="file" id="file" name="file">
+            </div>
+            <div class="form-group">
+                <label>Jenis Kelamin:</label>
+                <div class="gender">
+                    <input type="radio" id="male" name="gender" value="Laki-laki">
+                    <label for="male">Laki-laki</label>
+                    <input type="radio" id="female" name="gender" value="Perempuan">
+                    <label for="female">Perempuan</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Hobi:</label>
+                <div class="hobby">
+                    <input type="checkbox" id="music" name="hobby" value="Musik">
+                    <label for="music">Musik</label>
+                    <input type="checkbox" id="sports" name="hobby" value="Olahraga">
+                    <label for="sports">Olahraga</label>
+                    <input type="checkbox" id="reading" name="hobby" value="Membaca">
+                    <label for="reading">Membaca</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="search">Cari:</label>
+                <input type="search" id="search" name="search">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
