@@ -20,7 +20,7 @@
             padding: 20px;
             border-radius: 10px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            width: 100%;
+            width: 90%;
             max-width: 400px;
             text-align: center;
         }
@@ -35,17 +35,24 @@
             font-weight: bold;
             display: block;
             color: #555;
+            margin-bottom: 5px;
         }
-        input[type="text"], input[type="password"], input[type="date"], input[type="file"], input[type="search"] {
-            width: 100%;
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="file"],
+        input[type="search"] {
+            width: calc(100% - 20px);
             padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
             box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
-        .gender, .hobby {
-            margin-top: 5px;
+        .radio-group, .checkbox-group {
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
         }
         button {
             width: 100%;
@@ -74,7 +81,7 @@
                 padding: 20px;
             }
             .container {
-                width: 90%;
+                width: 95%;
             }
             input, button {
                 font-size: 14px;
@@ -106,22 +113,17 @@
             </div>
             <div class="form-group">
                 <label>Jenis Kelamin:</label>
-                <div class="gender">
-                    <input type="radio" id="male" name="gender" value="Laki-laki">
-                    <label for="male">Laki-laki</label>
-                    <input type="radio" id="female" name="gender" value="Perempuan">
-                    <label for="female">Perempuan</label>
+                <div class="radio-group">
+                    <label><input type="radio" id="male" name="gender" value="Laki-laki"> Laki-laki</label>
+                    <label><input type="radio" id="female" name="gender" value="Perempuan"> Perempuan</label>
                 </div>
             </div>
             <div class="form-group">
                 <label>Hobi:</label>
-                <div class="hobby">
-                    <input type="checkbox" id="music" name="hobby" value="Musik">
-                    <label for="music">Musik</label>
-                    <input type="checkbox" id="sports" name="hobby" value="Olahraga">
-                    <label for="sports">Olahraga</label>
-                    <input type="checkbox" id="reading" name="hobby" value="Membaca">
-                    <label for="reading">Membaca</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" id="music" name="hobby" value="Musik"> Musik</label>
+                    <label><input type="checkbox" id="sports" name="hobby" value="Olahraga"> Olahraga</label>
+                    <label><input type="checkbox" id="reading" name="hobby" value="Membaca"> Membaca</label>
                 </div>
             </div>
             <div class="form-group">
