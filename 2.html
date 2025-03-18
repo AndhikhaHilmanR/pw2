@@ -7,57 +7,79 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
+            background: linear-gradient(to right, #6a11cb, #2575fc);
             display: flex;
             justify-content: center;
             align-items: center;
             height: 100vh;
+            margin: 0;
+            padding: 10px;
         }
         .container {
-            background: #fff;
+            background: white;
             padding: 20px;
             border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 350px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
         }
         h2 {
-            text-align: center;
             color: #333;
         }
         .form-group {
             margin-bottom: 15px;
+            text-align: left;
         }
         label {
             font-weight: bold;
             display: block;
+            color: #555;
         }
         input[type="text"], input[type="password"], input[type="date"], input[type="file"], input[type="search"] {
             width: 100%;
-            padding: 8px;
+            padding: 10px;
             margin-top: 5px;
             border: 1px solid #ccc;
             border-radius: 5px;
+            box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.1);
         }
         .gender, .hobby {
             margin-top: 5px;
         }
         button {
             width: 100%;
-            padding: 10px;
-            background: #28a745;
+            padding: 12px;
+            background: #2575fc;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
+            transition: 0.3s;
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
         }
         button:hover {
-            background: #218838;
+            background: #6a11cb;
         }
         .profile-pic {
             display: block;
             margin: 0 auto 15px;
             border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        @media (max-width: 600px) {
+            body {
+                height: auto;
+                padding: 20px;
+            }
+            .container {
+                width: 90%;
+            }
+            input, button {
+                font-size: 14px;
+                padding: 8px;
+            }
         }
     </style>
 </head>
