@@ -15,10 +15,34 @@ body {
     padding: 20px;
 }
 
+/* Header */
+header {
+    background-color: #007bff;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background-color: #0056b3;
+    transition: 0.3s ease-in-out;
+}
+
+header a:hover {
+    background-color: #004494;
+}
+
 /* Kontainer utama */
 .container {
     max-width: 800px;
-    margin: 0 auto;
+    margin: 20px auto;
     background: white;
     padding: 20px;
     border-radius: 10px;
@@ -30,7 +54,7 @@ input,
 select {
     width: 100%;
     padding: 10px;
-    margin: 5px 0;
+    margin-bottom: 10px;
     border: 1px solid grey;
     border-radius: 5px;
     display: block;
@@ -42,6 +66,7 @@ button,
 input[type="submit"],
 input[type="button"] {
     width: 100%;
+    max-width: 250px;
     color: white;
     background: skyblue;
     border: none;
@@ -62,7 +87,6 @@ input[type="button"]:hover {
 ul {
     list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
 li {
@@ -73,7 +97,6 @@ li {
 table {
     border-collapse: collapse;
     width: 100%;
-    color: #000;
     background: white;
     margin-top: 10px;
     border-radius: 5px;
@@ -94,8 +117,16 @@ table tr:nth-child(even) {
 table th {
     background: skyblue;
     color: white;
-    font-weight: bold;
     text-align: center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #007bff;
+    color: white;
+    margin-top: 20px;
 }
 
 /* Media Queries untuk Responsivitas */
@@ -118,5 +149,11 @@ table th {
     table td {
         padding: 8px;
         font-size: 12px;
+    }
+
+    button,
+    input[type="submit"],
+    input[type="button"] {
+        max-width: 100%;
     }
 }
