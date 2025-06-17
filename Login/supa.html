@@ -1,12 +1,127 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Andhikha hilman R</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Andhikha Hilman R</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #f0f2f5, #d9e4f5);
+      color: #333;
+    }
+
+    .profile-container {
+      max-width: 600px;
+      margin: auto;
+      padding: 20px;
+      text-align: center;
+    }
+
+    .header-bg {
+      height: 150px;
+      background: #4A90E2;
+      border-radius: 0 0 20px 20px;
+    }
+
+    .profile-photo-wrapper {
+      margin-top: -80px;
+    }
+
+    .profile-photo {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .header-text h1 {
+      margin-top: 10px;
+      font-size: 28px;
+      color: #222;
+      text-transform: capitalize;
+    }
+
+    .subtitle {
+      color: #555;
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    a {
+      color: #4A90E2;
+      text-decoration: none;
+    }
+
+    .action-buttons {
+      margin-top: 15px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 5px;
+      font-size: 15px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      background-color: #4A90E2;
+      color: white;
+      transition: background 0.3s;
+    }
+
+    button:hover {
+      background-color: #357ABD;
+    }
+
+    .content-card {
+      background: white;
+      margin-top: 20px;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+      text-align: left;
+    }
+
+    .content-card h2 {
+      margin: 0 0 10px 0;
+      color: #333;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    @media (max-width: 600px) {
+      .profile-photo {
+        width: 100px;
+        height: 100px;
+      }
+
+      .header-text h1 {
+        font-size: 22px;
+      }
+
+      button {
+        width: 100%;
+        margin: 8px 0;
+      }
+
+      .content-card {
+        padding: 15px;
+      }
+    }
+  </style>
 </head>
 <body>
+
 <div class="profile-container">
   <div class="header-bg"></div>
 
@@ -15,18 +130,15 @@
   </div>
 
   <div class="header-text">
-    <h1>andhikha hilman r</h1>
+    <h1>Andhikha Hilman R</h1>
     <p class="subtitle">He/Him • Multimedia</p>
-    <p>Jakarta, Indonesia • <a href="https://wawan.hilman.com">wawan.hilman.com</a></p>
-    <p><strong> </strong> — Universitas Ahmad Dahlan</p>
+    <p>Jakarta, Indonesia • <a href="https://wawan.hilman.com" target="_blank">wawan.hilman.com</a></p>
+    <p>Universitas Ahmad Dahlan</p>
   </div>
 
   <div class="action-buttons">
-
-
-    <button id="loginBtn">Login untuk akses data</button>
-<button id="logoutBtn">Logout</button>
-
+    <button id="loginBtn">🔐 Login</button>
+    <button id="logoutBtn">🚪 Logout</button>
   </div>
 
   <div id="content"></div>
@@ -34,8 +146,8 @@
   <div class="content-card">
     <h3>Sosial Media</h3>
     <ul>
-      <li><strong>linkedin :</strong> http://linkedin.com/in/hilman</li>
-      <li><strong>credly :</strong> https://www.credly.com/users/wawan-hilman</li>
+      <li><strong>LinkedIn:</strong> <a href="http://linkedin.com/in/hilman" target="_blank">linkedin.com/in/hilman</a></li>
+      <li><strong>Credly:</strong> <a href="https://www.credly.com/users/wawan-hilman" target="_blank">credly.com/wawan-hilman</a></li>
     </ul>
   </div>
 </div>
@@ -44,16 +156,15 @@
 import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
 
 const SUPABASE_URL = 'https://xlfwladjtxuowltutney.supabase.co'
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhsZndsYWRqdHh1b3dsdHV0bmV5Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDk1Mjc0MDAsImV4cCI6MjA2NTEwMzQwMH0.HajuR2D0YqcQkETP5rYenMpbx1wmYQHOli-gPdGe1WA'
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR...'
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY)
 const content = document.getElementById('content')
 
-// Coba login manual (bisa diganti pakai form)
 async function login() {
   const { data, error } = await supabase.auth.signInWithPassword({
-    email: 'user@example.com', // ganti dengan akun terdaftar
-    password: 'password123'     // ganti sesuai user
+    email: 'user@example.com',
+    password: 'password123'
   })
 
   if (error) {
@@ -69,28 +180,16 @@ async function logout() {
   content.innerHTML = '<p>Logout berhasil.</p>'
 }
 
-// Load data hanya milik user yang login
 async function loadData() {
-  const {
-    data: { user }
-  } = await supabase.auth.getUser()
-
+  const { data: { user } } = await supabase.auth.getUser()
   if (!user) {
-
     content.innerHTML = '<p>Silakan login untuk melihat data.</p>'
     return
   }
 
-
-
-
-  const { data, error } = await supabase
-    .from('web3')
-    .select('*')
-    .order('id')
-
+  const { data, error } = await supabase.from('web3').select('*').order('id')
   if (error) {
-    alert('Error loading data: ' + error.message)
+    alert('Gagal memuat data: ' + error.message)
     return
   }
 
@@ -105,13 +204,10 @@ async function loadData() {
   })
 
   content.innerHTML = out
-
 }
-
 
 document.getElementById('loginBtn').addEventListener('click', login)
 document.getElementById('logoutBtn').addEventListener('click', logout)
-
 
 window.addEventListener('DOMContentLoaded', async () => {
   const { data: { user } } = await supabase.auth.getUser()
